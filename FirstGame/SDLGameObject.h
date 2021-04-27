@@ -24,6 +24,8 @@ protected:
 
     Vector2D m_position;
     Vector2D m_velocity;
+    Vector2D m_acceleration;
+
 
 
     int m_width;

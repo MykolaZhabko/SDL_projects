@@ -3,6 +3,7 @@
 #include "GameObject.h"
 #include <SDL2/SDL.h>
 #include<SDL2/SDL_image.h>
+#include "InputHandler.h"
 #include <iostream>
 #include<stdlib.h>
 #include <vector>
@@ -32,6 +33,7 @@ public:
 	void update();
 	void handleEvents();
 	void clean();
+	void quit();
 	SDL_Renderer* getRenderer() const { return m_pRenderer; }
 	// a function to access the private running variable
 
