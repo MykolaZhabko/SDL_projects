@@ -20,9 +20,14 @@ void Player::update()
 	//	m_velocity.setY(-2);
 	//}
 
-	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
-	m_velocity = (*vec - m_position) / 100;
 
+	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
+	//std::cout << vec->getX();
+	if (vec != NULL)
+	{
+		m_velocity = (*vec - m_position) / 100;
+		//std::cout << m_velocity.getX();
+	}
 	SDLGameObject::update();
 }
 

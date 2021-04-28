@@ -1,6 +1,8 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_mouse.h>
 #include <vector>
 #include <iostream>
+#include "Vector2D.h"
 
 
 
@@ -53,6 +55,7 @@ public:
 
 private:
 	InputHandler() {
+		m_mousePosition = (Vector2D*)malloc(sizeof(Vector2D) * 1);
 		for (int i = 0; i < 3; i++)
 		{
 			m_mouseButtonStates.push_back(false);

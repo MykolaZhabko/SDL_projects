@@ -98,9 +98,16 @@ void InputHandler::update() {
 
 		if (event.type == SDL_MOUSEMOTION)
 		{
-			m_mousePosition->setX(event.motion.x);
-			m_mousePosition->setY(event.motion.y);
+		
+				std::cout << event.motion.x << " ";
+				std::cout << m_mousePosition << " ";
+				m_mousePosition->setX(event.motion.x);
+				m_mousePosition->setY(event.motion.y);
+			
 		}
-	
+
+		if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)) {
+			SDL_Log("Mouse Button 1 (left) is pressed.");
+		}
 	}
 }
