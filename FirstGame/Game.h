@@ -33,7 +33,11 @@ public:
 	void update();
 	void handleEvents();
 	void clean();
-	void quit();
+
+	void quit() {
+		m_bRunning = false;
+	}
+
 	SDL_Renderer* getRenderer() const { return m_pRenderer; }
 	// a function to access the private running variable
 
